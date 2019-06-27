@@ -1,0 +1,26 @@
+<script data-cfasync="false" type="text/javascript">
+  $(document).ready(function() {
+      $('#vip_form').submit(function(event) {
+        event.preventDefault();
+
+        $('#vip_form .errors').remove();
+
+        var discountCode = $('#VipCode').val().toLowerCase().trim();
+
+        if (discountCode.length > 0) {
+          $.get("https://api.rudyprojectna.com/api/vip?code=" + discountCode, function(data) {
+            if (data.success) {
+              Cookies.set('discount_code_inserted', discountCode);
+              document.location.href = '/discount/'+ data.success.code +'?redirect=/collections/vip-welcome';
+            } else if (data.error) {
+              $('#vip_form').prepend("<div class='errors'><ul><li>" + data.error + "</li></ul></div>")
+            } else {
+              $('#vip_form').prepend("There was an unexpected error please try again.");
+            }
+          });
+        } else {
+          $('#vip_form').prepend("<div class='errors'><ul><li>Please enter a VIP code.</li></ul></div>")
+        }
+      });
+  });
+</script>

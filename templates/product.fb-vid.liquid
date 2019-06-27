@@ -1,0 +1,45 @@
+{% include 'shogun-products', content: product %}
+{{product.metafields.shogun.above}}
+{% include 'elspw_product' %}
+{%- include 'bold-product' with product, hide_action: 'break', output: 'none' -%}
+{% section "product" %}
+
+<script text="text/javascript">
+  var _learnq = _learnq || [];
+
+  var item = {
+    Name: {{ product.title|json }},
+    ProductID: {{ product.id|json }},
+    Categories: {{ product.collections|map:'title'|json }},
+    ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+    URL: "{{ shop.secure_url }}{{ product.url }}",
+    Brand: {{ product.vendor|json }},
+    Price: {{ product.price|money|json }},
+    CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+  };
+
+  _learnq.push(['track', 'Viewed Product', item]);
+  _learnq.push(['trackViewedItem', {
+    Title: item.Name,
+    ItemId: item.ProductID,
+    Categories: item.Categories,
+    ImageUrl: item.ImageURL,
+    Url: item.URL,
+    Metadata: {
+      Brand: item.Brand,
+      Price: item.Price,
+      CompareAtPrice: item.CompareAtPrice
+    }
+  }]);
+</script>
+{{product.metafields.shogun.below}}
+
+<!--TAYLOR'S EMBED CODE FOR FACEBOOK (RESPONSIVE)-->
+<div style="padding: 15px;">
+<div class="facebook-responsive">
+<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FRudyProjectNA%2Fvideos%2F1261256714030254%2F&show_text=0&width=560" width="800" height='“340"' style="border: none; overflow: hidden;" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true"></iframe>
+</div>
+</div>
+
+
+{% include 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: true, auto_install: true %}

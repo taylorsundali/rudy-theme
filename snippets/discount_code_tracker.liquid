@@ -1,0 +1,31 @@
+<script data-cfasync="false" type="text/javascript">
+  $(document).ready(function() {
+    var tags = null;
+    var discountCode = null;
+
+    {% if customer and customer.tags %}
+      tags = "{{ customer.tags | join: ',' }}";
+      tags = tags.split(",");
+    {% endif %}
+
+    if (tags !== null && tags !== '') {
+      tags = tags.filter(tag => tag.toUpperCase() !== 'BRO' && tag.toUpperCase() !== 'LEADER');
+      discountCode = tags[0];
+      postDiscount(discountCode);
+    } else if(Cookies.get('discount_code_inserted')) {
+      discountCode = Cookies.get('discount_code_inserted');
+      postDiscount(discountCode);
+    }
+
+    function postDiscount(discountCode) {
+      var params = {
+        type: 'POST',
+        url: '/cart/update.js',
+        data: 'attributes[Discount Code]=' + discountCode,
+        dataType: 'json'
+      };
+
+      jQuery.ajax(params);
+    }
+  })
+</script>

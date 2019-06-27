@@ -1,0 +1,39 @@
+<!-- /templates/page.liquid -->
+<div class="wrapper page-margin">
+  <div class="grid">
+    <div class="grid__item large--one-third push--large--one-third">
+      <h1 class="text-center h2">{{ page.title }}</h1>
+      {% include 'hypervisual' %}
+      <div class="rte">
+        {{ page.content }}
+           
+      {% if customer.metafields.customr.wds_account != nil %}
+        <p><strong>WDS Account:</strong> {{ customer.metafields.customr.wds_account }}</p>
+      {% endif %}
+      {% if customer.metafields.customr.wds_ship_to != nil %}
+        <p><strong>WDS Ship To:</strong> {{ customer.metafields.customr.wds_ship_to }}</p>
+      {% endif %}
+      {% if customer.metafields.customr.team_name != nil %}
+        <p><strong>Team Name:</strong> {{ customer.metafields.customr.team_name }}</p>
+      {% endif %}
+      {% if customer.metafields.customr.vipcode != nil %}
+        <p><strong>VIPCODE:</strong> {{ customer.metafields.customr.vipcode }}</p>
+      {% endif %}
+      {% if customer.metafields.customr.racing_sunglasses != nil %}
+        <p><strong>Racing Sunglasses:</strong> {{ customer.metafields.customr.racing_sunglasses}} </p>
+      {% endif %}
+      {% if customer.metafields.customr.casual_sunglasses != nil %}
+        <p><strong>Casual Sunglasses:</strong> {{ customer.metafields.customr.casual_sunglasses }}</p>
+      {% endif %}
+       {% if customer.metafields.customr.road_helmets != nil %}
+        <p><strong>Road Helmets:</strong> {{ customer.metafields.customr.road_helmets }}</p>
+      {% endif %}
+       {% if customer.metafields.customr.tt_helmets != nil %}
+        <p><strong>TT Helmets:</strong> {{ customer.metafields.customr.tt_helmets }}</p>
+      {% endif %}
+		
+        <div class="btn btn--large btn--clear btn--square uppercase"><a href="/collections/your-winter-bank" style="text-decoration: none;">start shopping</a></div>
+      </div>
+    </div>
+  </div>
+</div>

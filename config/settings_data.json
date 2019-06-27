@@ -1,0 +1,828 @@
+{
+  "current": {
+    "color_account_bg": "#2a2a2a",
+    "color_account_text": "#ffffff",
+    "color_header_bg": "#000000",
+    "color_header_text": "#ffffff",
+    "color_body_bg": "#ffffff",
+    "color_body_text": "#000000",
+    "color_primary": "#000000",
+    "color_splash": "#d11a1a",
+    "color_border": "#cfcfcf",
+    "homepage_background_light": "#f7f7f7",
+    "homepage_background_dark": "#2e3438",
+    "product_background_color": "rgba(0,0,0,0)",
+    "product_slideshow_arrows": "#cfcfcf",
+    "color_footer_bg": "#0e0d0d",
+    "color_footer_text": "#ffffff",
+    "color_footer_social_link": "#bebebe",
+    "font_title": "google:sansStack:Montserrat:400",
+    "font_title_capitalize": false,
+    "font_accent": "google:sansStack:Montserrat:400",
+    "font_body": "google:sansStack:Montserrat:400",
+    "base_font_px": 15,
+    "cart_type": "page",
+    "cart_show_on_click": true,
+    "cart_vendor_enable": false,
+    "cart_notes_enable": false,
+    "cart_quantity": true,
+    "cart_show_additional_buttons": false,
+    "cart_continue_browsing": "shopify:\/\/collections\/best-selling-products",
+    "collection_text_alignment": "text-center",
+    "product_grid_style": "under",
+    "image_autoheight_enable": false,
+    "tag_sellout": false,
+    "tag_sale": false,
+    "tag_new": false,
+    "tag_new_limit": 14,
+    "twittercard_handle": "",
+    "social_twitter_link": "https:\/\/twitter.com\/rudyprojectna",
+    "social_facebook_link": "https:\/\/facebook.com\/rudyprojectna",
+    "social_instagram_link": "https:\/\/instagram.com\/rudyprojectna",
+    "social_pinterest_link": "",
+    "social_google_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "social_tumblr_link": "",
+    "social_fancy_link": "",
+    "product_social_enable": false,
+    "share_enable_facebook": true,
+    "share_enable_twitter": true,
+    "share_enable_pinterest": true,
+    "share_enable_google": false,
+    "social_home_image": "",
+    "favicon": "shopify:\/\/shop_images\/faicon.png",
+    "pt_show_refine": true,
+    "pt_show_collection_group": true,
+    "pt_show_clear": true,
+    "pt_show_view_all": true,
+    "pt_show_collection_count": true,
+    "pt_show_show_single_group": true,
+    "pt_single_filter_per_group": true,
+    "pt_show_tags_group": false,
+    "pt_show_sort_by_group": false,
+    "pt_show_sort_by_checkboxes": false,
+    "pt_scroll_filter_group": false,
+    "pt_show_inactive_filters": false,
+    "pt_refine_text": "Refine",
+    "pt_clear_text": "clear",
+    "pt_view_all_text": "view all",
+    "pt_tags_text": "Tags",
+    "pt_sort_by_text": "Sort By",
+    "pt_collection_text": "Collection",
+    "pt_sort_manual_text": "Featured",
+    "pt_sort_price_asc_text": "Price: Low to High",
+    "pt_sort_price_desc_text": "Price: High to Low",
+    "pt_sort_title_asc_text": "A-Z",
+    "pt_sort_title_desc_text": "Z-A",
+    "pt_sort_created_asc_text": "Newest Last",
+    "pt_sort_created_desc_text": "Newest",
+    "pt_sort_best_selling_text": "Best Selling",
+    "color_pt_header_text": "#222",
+    "color_pt_header_border": "#ddd",
+    "pt_header_size": "18px",
+    "pt_header_font": "none",
+    "color_pt_links": "#222",
+    "color_pt_links_hover": "#333",
+    "pt_links_size": "12px",
+    "pt_links_font": "none",
+    "pt_show_checkboxes": true,
+    "color_pt_clear_bg": "#eee",
+    "color_pt_clear_text": "#222",
+    "color_pt_clear_bg_hover": "#ddd",
+    "color_pt_clear_text_hover": "#222",
+    "pt_small_boxes": "",
+    "color_pt_small_box_bg_hover": "#222",
+    "color_pt_small_box_text_hover": "#fff",
+    "pt_two_columns": "",
+    "pt_color_swatches": "",
+    "pt_color_swatch_type": "swatch",
+    "pt_color_collection_1": "",
+    "pt_color_1": "#111",
+    "pt_color_collection_2": "",
+    "pt_color_2": "#222",
+    "pt_color_collection_3": "",
+    "pt_color_3": "#333",
+    "pt_color_collection_4": "",
+    "pt_color_4": "#444",
+    "pt_color_collection_5": "",
+    "pt_color_5": "#555",
+    "pt_color_collection_6": "",
+    "pt_color_6": "#666",
+    "pt_color_collection_7": "",
+    "pt_color_7": "#777",
+    "pt_color_collection_8": "",
+    "pt_color_8": "#888",
+    "pt_color_collection_9": "",
+    "pt_color_9": "#999",
+    "pt_color_collection_10": "",
+    "pt_color_10": "#aaa",
+    "pt_color_collection_11": "",
+    "pt_color_11": "#bbb",
+    "pt_color_collection_12": "",
+    "pt_color_12": "#ccc",
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/rp.logo_420e0e12-1290-43c5-8d78-cb08187d9aec.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "Helvetica Neue",
+    "checkout_body_font": "Helvetica Neue",
+    "checkout_accent_color": "#d11a1a",
+    "checkout_button_color": "#d11a1a",
+    "checkout_error_color": "#e34040",
+    "checkout_use_header_image": false,
+    "checkout_logo": "",
+    "checkout_use_body_background_image": false,
+    "checkout_use_sidebar_background_image": false,
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/rp.logo.white_ddd6e92f-9dcb-433a-84f3-761aa274242b.png",
+          "logo_max_limit": 250,
+          "main_menu_linklist": "main-menu",
+          "height": "header--medium",
+          "meganav_image": "",
+          "meganav_link": "",
+          "header_message": "ORDERS OVER $200 SHIP FREE TO US & CANADA - SEE MORE DETAILS",
+          "header_message_url": "https:\/\/www.rudyprojectna.com\/pages\/policies-shipping",
+          "header_enable_account": true,
+          "header_enable_search": true,
+          "search_only_products": false
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "text": {
+            "type": "text",
+            "settings": {
+              "title": "Rudy Project",
+              "text": "<p>Italian Crafted Sunglasses, Helmets, Goggles, + Rx\/Prescription Eyewear Since 1985 &bull; 8-Time #1 Most-Worn Aero \/ TT Helmet at IRONMAN&reg; World Championships &bull;&nbsp;<br><br><strong>Contact Us:<\/strong><\/p>\n<p>&nbsp;949.272.2440<br>email@rudyprojectna.com<\/p>"
+            }
+          },
+          "newsletter": {
+            "type": "newsletter",
+            "settings": {
+              "text": "Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals."
+            }
+          }
+        },
+        "block_order": [
+          "text",
+          "newsletter"
+        ],
+        "settings": {
+          "footer_image": "shopify:\/\/shop_images\/rp.logo.white_ddd6e92f-9dcb-433a-84f3-761aa274242b.png",
+          "footer_secondary_linklist": "footer",
+          "footer_payment_enable": false,
+          "footer_social_enable": true
+        }
+      },
+      "product": {
+        "type": "product",
+        "blocks": {
+          "1505945739158": {
+            "type": "tab_description",
+            "settings": {}
+          }
+        },
+        "block_order": [
+          "1505945739158"
+        ],
+        "settings": {
+          "product_breadcrumbs": true,
+          "show_quantity": false,
+          "product_nav_enable": false,
+          "product_show_vendor": false,
+          "zoom_enable": true,
+          "related_products_enable": true,
+          "product_reviews_enable": true,
+          "info_page": "",
+          "tabs_position": "below"
+        }
+      },
+      "collection": {
+        "type": "collection",
+        "settings": {
+          "grid_setting_large": 3,
+          "grid_setting_medium": 3,
+          "grid_setting_small": 2,
+          "collection_custom_nav_list": "",
+          "collection_standard_nav": false,
+          "collection_type_nav": false,
+          "collection_vendor_nav": false,
+          "collection_tag_nav": false,
+          "collection_sorting": true,
+          "image_height": "use_screen_one_half",
+          "overlay_opacity": 30,
+          "text_color": "homepage--white",
+          "parallax": true
+        }
+      },
+      "blog": {
+        "type": "blog",
+        "settings": {
+          "layout": "grid",
+          "blog_show_meta": false,
+          "image": "",
+          "overlay_opacity": 0,
+          "text_color": "homepage--light",
+          "parallax": true,
+          "tags": false
+        }
+      },
+      "article": {
+        "type": "article",
+        "settings": {
+          "blog_show_meta": true,
+          "tags": false,
+          "social": true,
+          "image_height": "use_screen_one_half",
+          "parallax": true,
+          "sidebar_tags": false,
+          "recent": true
+        }
+      },
+      "index-product": {
+        "type": "index-product",
+        "settings": {
+          "title": "Featured product",
+          "home_product": "",
+          "homepage_product_color": "homepage--white",
+          "show_quantity": true,
+          "product_show_vendor": false,
+          "zoom_enable": false,
+          "info_page": "",
+          "tabs_position": "below"
+        }
+      },
+      "index-collection": {
+        "type": "index-collection",
+        "settings": {
+          "title": "Top Selling EYEWEAR",
+          "collection": "best-selling-sunglasses",
+          "grid": 4,
+          "rows": 1,
+          "homepage_collection_color": "homepage--white",
+          "show_view_all": true
+        }
+      },
+      "index-instagram": {
+        "type": "index-instagram",
+        "settings": {
+          "title": "Shop Our Instagram Feed",
+          "homepage_instagram_color": "homepage--light",
+          "token": "321337196.b534787.fc51e1aeaa2e4f26a24417f4b694ac81",
+          "instagram_photo_count": 10,
+          "instagram_grid_setting_large": 5,
+          "instagram_grid_setting_medium": 3,
+          "instagram_grid_setting_small": 2
+        }
+      },
+      "index-columns": {
+        "type": "index-columns",
+        "blocks": {
+          "index-columns-0": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/editfree-ship_4263b8ed-0734-4481-8877-b5ee452625e0.jpg",
+              "title": "FREE SHIPPING",
+              "text": "<p>To U.S. &amp; Canada on select orders<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "index-columns-1": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/edit-money_icon_3cb5501e-d946-4097-bb2f-d22545c68b16.jpg",
+              "title": "Low-PRICE GUARANTEE",
+              "text": "<p>See it for a lower price? We'll match it<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "index-columns-2": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/returns_icon_71fd596b-b85d-4da0-8631-6db1a8d2cadb.jpg",
+              "title": "90-DAY RETURNS",
+              "text": "<p>If you're not happy, we're not happy<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "index-columns-0",
+          "index-columns-1",
+          "index-columns-2"
+        ],
+        "settings": {
+          "title": "",
+          "homepage_columns_color": "homepage--white",
+          "align_text": "text-center"
+        }
+      },
+      "index-logos": {
+        "type": "index-logos",
+        "blocks": {
+          "index-logos-0": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/8x-kona-final.jpg",
+              "link": ""
+            }
+          },
+          "index-logos-1": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/MJ.gear_lab_1.jpg",
+              "link": ""
+            }
+          },
+          "index-logos-2": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/triathletemag_best_in_fit_w_product_square.jpg",
+              "link": ""
+            }
+          },
+          "index-logos-3": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/USAT-Partners.jpg",
+              "link": ""
+            }
+          },
+          "index-logos-4": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/CAF_logo.jpg",
+              "link": ""
+            }
+          },
+          "1504714952314": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Triathlete-BG-Best-In-Class-Logo.png",
+              "link": ""
+            }
+          },
+          "1504714988660": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/2008_Outside_Magazine_Gear_of_the_Year_-_Zyon_Sunglasses.jpg",
+              "link": ""
+            }
+          },
+          "1504715003329": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/GI-bestInClass_2015-Badges_2x2_10b8b651-c7d3-4421-85f7-d46ee5c64df0.png",
+              "link": ""
+            }
+          },
+          "1504715021215": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Ultra_Running_Top_Pick_Tralyx.png",
+              "link": ""
+            }
+          },
+          "1504715033218": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/RAAM_logocolor_1.jpg",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "index-logos-0",
+          "index-logos-1",
+          "index-logos-2",
+          "index-logos-3",
+          "index-logos-4",
+          "1504714952314",
+          "1504714988660",
+          "1504715003329",
+          "1504715021215",
+          "1504715033218"
+        ],
+        "settings": {
+          "title": "",
+          "homepage_logos_bg_color": "homepage--white"
+        }
+      },
+      "1504715407032": {
+        "type": "index-slideshow",
+        "blocks": {
+          "1550268069080": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Defender_Homepage_Slider.jpg",
+              "overlay_opacity": 15,
+              "title": "DEFENDER",
+              "description": "Elevate Your Performance",
+              "text_align": "text-left",
+              "color": "homepage--white",
+              "link_text": "SHOP NOW",
+              "link": "shopify:\/\/products\/defender",
+              "button_style": "btn btn--large btn--clear btn--square uppercase",
+              "button_image": ""
+            }
+          },
+          "1555609126747": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Spectrum_Homepage_Slider.jpg",
+              "overlay_opacity": 15,
+              "title": "THE ALL-NEW SPECTRUM",
+              "description": "Performance Redefined",
+              "text_align": "text-left",
+              "color": "homepage--white",
+              "link_text": "View products",
+              "link": "https:\/\/www.rudyprojectna.com\/products\/spectrum-helmets",
+              "button_style": "btn btn--large btn--clear btn--square uppercase",
+              "button_image": ""
+            }
+          },
+          "1558458918373": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Flash_Homepage_Slider.jpg",
+              "overlay_opacity": 15,
+              "title": "BEST DEALS",
+              "description": "Find the lowest prices on <br>outgoing styles in our Outlet.",
+              "text_align": "text-left",
+              "color": "homepage--white",
+              "link_text": "View outlet",
+              "link": "shopify:\/\/collections\/sale",
+              "button_style": "btn btn--large btn--clear btn--square uppercase",
+              "button_image": ""
+            }
+          },
+          "1555537808658": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Styrm_Homepage_Slider.jpg",
+              "overlay_opacity": 15,
+              "title": "INTRODUCING STRYM",
+              "description": "Clean, Lightweight and Aero",
+              "text_align": "text-left",
+              "color": "homepage--white",
+              "link_text": "View products",
+              "link": "shopify:\/\/products\/strym-helmets",
+              "button_style": "btn btn--large btn--clear btn--square uppercase",
+              "button_image": ""
+            }
+          },
+          "1555609232025": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Spinair57_Slider_v3.jpg",
+              "overlay_opacity": 15,
+              "title": "SPINAIR 57",
+              "description": "Elevate Your Performance",
+              "text_align": "text-left",
+              "color": "homepage--white",
+              "link_text": "View products",
+              "link": "shopify:\/\/products\/spinair-57",
+              "button_style": "btn btn--large btn--clear btn--square uppercase",
+              "button_image": ""
+            }
+          }
+        },
+        "block_order": [
+          "1550268069080",
+          "1555609126747",
+          "1558458918373",
+          "1555537808658",
+          "1555609232025"
+        ],
+        "settings": {
+          "autoplay": false,
+          "autoplay_speed": 5,
+          "height": "use_screen_full"
+        }
+      },
+      "1507930046197": {
+        "type": "index-collection",
+        "settings": {
+          "title": "top selling helmets",
+          "collection": "new-helmets",
+          "grid": 4,
+          "rows": 1,
+          "homepage_collection_color": "homepage--white",
+          "show_view_all": true
+        }
+      },
+      "1508168489529": {
+        "type": "index-blog",
+        "settings": {
+          "title": "News",
+          "homepage_blog": "news",
+          "homepage_blog_count": 3,
+          "homepage_blog_color": "homepage--light"
+        }
+      },
+      "1525190971515": {
+        "type": "index-collection-grid",
+        "blocks": {
+          "1525190971515-0": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "performance-sunglasses",
+              "title": "Performance Eyewear",
+              "link_text": "View products"
+            }
+          },
+          "1525191063835": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "helmets",
+              "title": "Helmets",
+              "link_text": "View products"
+            }
+          },
+          "1536557309082": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "all-gear",
+              "title": "Rudy Project Gear",
+              "link_text": "View products"
+            }
+          }
+        },
+        "block_order": [
+          "1525190971515-0",
+          "1525191063835",
+          "1536557309082"
+        ],
+        "settings": {
+          "title": "TOP CATEGORIES",
+          "grid": 3,
+          "homepage_collection_grid_color": "homepage--white",
+          "color": "homepage--white",
+          "button_style": "btn btn--clear btn--square uppercase",
+          "overlay_opacity": 15
+        }
+      },
+      "collection-exclusive": {
+        "type": "collection-exclusive",
+        "settings": {
+          "grid_setting_large": 4,
+          "grid_setting_medium": 2,
+          "grid_setting_small": 2,
+          "collection_custom_nav_list": "",
+          "collection_standard_nav": false,
+          "collection_type_nav": false,
+          "collection_vendor_nav": false,
+          "collection_tag_nav": false,
+          "collection_sorting": false,
+          "image_height": "use_screen_one_third",
+          "overlay_opacity": 20,
+          "text_color": "homepage--white",
+          "parallax": true
+        }
+      },
+      "vip-login-banner": {
+        "type": "vip-login-banner",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/8392_BRO-LANDING-PAGE-crop.jpg",
+          "height": "use_image",
+          "overlay_opacity": 15,
+          "parallax": false,
+          "title": "",
+          "description": "",
+          "text_align": "text-center",
+          "color": "homepage--white",
+          "link_text": "",
+          "link": "",
+          "button_style": "btn btn--large btn--clear btn--square uppercase",
+          "button_image": ""
+        }
+      }
+    },
+    "content_for_index": [
+      "1504715407032",
+      "1525190971515",
+      "index-collection",
+      "index-instagram",
+      "1507930046197",
+      "index-columns",
+      "1508168489529",
+      "index-logos"
+    ]
+  },
+  "presets": {
+    "Bright": {
+      "color_account_bg": "#000000",
+      "color_account_text": "#ffffff",
+      "color_header_bg": "#ffffff",
+      "color_header_text": "#333333",
+      "color_body_bg": "#ffffff",
+      "color_body_text": "#000000",
+      "color_primary": "#333333",
+      "color_splash": "#1391a4",
+      "color_border": "#cccccc",
+      "homepage_background_light": "#f7f7f7",
+      "homepage_background_dark": "#2e3438",
+      "product_background_color": "#f6f6f6",
+      "product_slideshow_arrows": "#cccccc",
+      "color_footer_bg": "#f2f2f2",
+      "color_footer_text": "#333333",
+      "color_footer_social_link": "#2e3438",
+      "font_title": "google:sansStack:Oswald:400",
+      "font_title_capitalize": true,
+      "font_accent": "google:sansStack:Montserrat:400",
+      "font_body": "google:serifStack:PT+Serif:400",
+      "base_font_px": 14,
+      "collection_text_alignment": "text-center",
+      "product_grid_style": "hover",
+      "image_autoheight_enable": true,
+      "cart_type": "modal",
+      "cart_show_on_click": true,
+      "cart_vendor_enable": false,
+      "cart_notes_enable": false,
+      "cart_show_additional_buttons": true,
+      "cart_continue_browsing": "shopify:\/\/collections\/all",
+      "twittercard_handle": "",
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_instagram_link": "",
+      "social_pinterest_link": "",
+      "social_google_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "social_tumblr_link": "",
+      "social_fancy_link": "",
+      "product_social_enable": false,
+      "share_enable_facebook": true,
+      "share_enable_twitter": true,
+      "share_enable_pinterest": true,
+      "share_enable_google": false,
+      "favicon": "",
+      "checkout_use_header_image": false,
+      "checkout_header_image": "",
+      "checkout_logo": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_use_body_background_image": false,
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_use_sidebar_background_image": false,
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_accent_color": "#1990C6",
+      "checkout_button_color": "#1990C6",
+      "checkout_error_color": "#ff6d6d"
+    },
+    "Dark": {
+      "color_account_bg": "#1d1d1d",
+      "color_account_text": "#afafaf",
+      "color_header_bg": "#000000",
+      "color_header_text": "#ffffff",
+      "color_body_bg": "#ffffff",
+      "color_body_text": "#000000",
+      "color_primary": "#000000",
+      "color_splash": "#e73131",
+      "color_border": "#cfcfcf",
+      "homepage_background_light": "#f7f7f7",
+      "homepage_background_dark": "#2e3438",
+      "product_background_color": "#cfcfcf",
+      "product_slideshow_arrows": "#cfcfcf",
+      "color_footer_bg": "#0e0d0d",
+      "color_footer_text": "#ffffff",
+      "color_footer_social_link": "#bebebe",
+      "font_title": "google:sansStack:PT+Mono:400",
+      "font_title_capitalize": false,
+      "font_accent": "google:sansStack:PT+Mono:400",
+      "font_body": "google:sansStack:PT+Mono:400",
+      "base_font_px": 14,
+      "collection_text_alignment": "text-center",
+      "product_grid_style": "under",
+      "image_autoheight_enable": true,
+      "cart_type": "modal",
+      "cart_show_on_click": true,
+      "cart_vendor_enable": false,
+      "cart_notes_enable": false,
+      "cart_show_additional_buttons": true,
+      "cart_continue_browsing": "shopify:\/\/collections\/all",
+      "twittercard_handle": "",
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_instagram_link": "",
+      "social_pinterest_link": "",
+      "social_google_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "social_tumblr_link": "",
+      "social_fancy_link": "",
+      "product_social_enable": false,
+      "share_enable_facebook": true,
+      "share_enable_twitter": true,
+      "share_enable_pinterest": true,
+      "share_enable_google": false,
+      "favicon": "",
+      "checkout_use_header_image": false,
+      "checkout_header_image": "",
+      "checkout_logo": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_use_body_background_image": false,
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_use_sidebar_background_image": false,
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_accent_color": "#1990C6",
+      "checkout_button_color": "#1990C6",
+      "checkout_error_color": "#ff6d6d"
+    },
+    "Light": {
+      "color_account_bg": "#f3f3f3",
+      "color_account_text": "#656565",
+      "color_header_bg": "#ffffff",
+      "color_header_text": "#656565",
+      "color_body_bg": "#ffffff",
+      "color_body_text": "#656565",
+      "color_primary": "#585e71",
+      "color_splash": "#f4a482",
+      "color_border": "#f7f7f7",
+      "homepage_background_light": "#f7f7f7",
+      "homepage_background_dark": "#2e3438",
+      "product_background_color": "#FFFFFF",
+      "product_slideshow_arrows": "#cccccc",
+      "color_footer_bg": "#ffffff",
+      "color_footer_text": "#656565",
+      "color_footer_social_link": "#a9a9a9",
+      "font_title": "google:sansStack:Megrim:400",
+      "font_title_capitalize": true,
+      "font_accent": "google:sansStack:Questrial:400",
+      "font_body": "google:sansStack:Abel:400",
+      "base_font_px": 14,
+      "collection_text_alignment": "text-center",
+      "product_grid_style": "hover",
+      "image_autoheight_enable": true,
+      "cart_type": "modal",
+      "cart_show_on_click": true,
+      "cart_vendor_enable": false,
+      "cart_notes_enable": false,
+      "cart_show_additional_buttons": true,
+      "cart_continue_browsing": "shopify:\/\/collections\/all",
+      "twittercard_handle": "",
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_instagram_link": "",
+      "social_pinterest_link": "",
+      "social_google_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "social_tumblr_link": "",
+      "social_fancy_link": "",
+      "product_social_enable": false,
+      "share_enable_facebook": true,
+      "share_enable_twitter": true,
+      "share_enable_pinterest": true,
+      "share_enable_google": false,
+      "favicon": "",
+      "checkout_use_header_image": false,
+      "checkout_header_image": "",
+      "checkout_logo": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_use_body_background_image": false,
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_use_sidebar_background_image": false,
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_accent_color": "#1990C6",
+      "checkout_button_color": "#1990C6",
+      "checkout_error_color": "#ff6d6d"
+    }
+  }
+}

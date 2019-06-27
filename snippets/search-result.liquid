@@ -1,0 +1,88 @@
+<!-- /snippets/search-result.liquid -->
+{% comment %}
+
+  This snippet defines the default structure of each search result.
+
+  'item' refers to the result, but typically mimics the product liquid tag,
+  so you can access product liquid tags with {{ item.XXX }}.
+
+  Remember that results aren't specific to products, so don't depend on
+  a featured image or item.type. Pages, for example, have a blank item.type.
+
+  Product liquid tag info:
+   - http://docs.shopify.com/themes/liquid-variables/product
+
+{% endcomment %}
+
+<div class="grid">
+
+  {% if item.featured_image %}
+    {% comment %}
+      We have a featured_image, so it's likely a product
+    {% endcomment %}
+    <div class="grid__item one-sixth">
+      <a href="{{ item.url }}" title="{{ item.title | escape }}">
+        {{ item.featured_image.src | img_url: 'medium' | img_tag: item.featured_image.alt }}
+      </a>
+    </div>
+    <div class="grid__item five-sixths">
+  {% elsif item.object_type == 'article' and item.image %}
+    <div class="grid__item one-sixth">
+     <a href="{{ item.url }}" title="{{ item.title | escape }}">
+       {{ item | image_url: 'medium' | img_tag: item.title }}
+     </a>
+    </div>
+    <div class="grid__item five-sixths">
+  {% else %}
+    <div class="grid__item five-sixths push--one-sixth">
+  {% endif %}
+
+    <p class="h3--body">{{ item.title | link_to: item.url }}</p>
+
+    {% comment %}
+      To show the price, let's pull what was already done on the product page,
+      but change product to item.
+    {% endcomment %}
+    
+    <div itemprop="price">
+    {% unless product.price == 0 %}
+      {% capture customprice %}{% include 'custom-product-price-calculator', product: item %}{% endcapture %}
+      {% assign customprice = customprice | times: 1 %}
+      {%- assign on_sale = false -%}
+      {%- if product.price > customprice and customprice > 0  -%}
+        {%- assign on_sale = true -%}
+      {%- endif -%}
+
+      {% assign product = item %}
+      
+      <p class="price_wrapper" {% if product.price_varies %} data-varies="{{ 'products.general.from' | t }}" {% endif %} {% if customer  %} {% else %} data-price="{{ product.price }}" data-product-id="{{ product.id }}" data-tags="{% for tag in product.tags %}{{ tag }}/{% endfor %}"{% endif %} >
+        
+        {% if customprice > 0 %}
+        	{% if product.price_varies %}{{ 'products.general.from' | t }} {% endif %}
+        	<span class="price special-price {% if on_sale %} on-sale{% endif %}">
+              	<span class="money">{{ customprice | money }}</span>
+            </span>
+            <br><span class="compare-at"><span class="money">{% if on_sale %}{{ product.price | money }}{% endif %}</span></span>
+            
+        {% else %}
+        	  <span  class="price{% if on_sale %} on-sale{% endif %} custom-price-calc">
+            	{% if product.price_varies %}{{ 'products.general.from' | t }} {% endif %}
+              	<span class="money">{{ product.price | money }}</span>
+            </span>
+            <br>
+        	<span class="compare-at"><span class="money">{% if on_sale %}{{ product.compare_at_price | money }}{% endif %}</span></span>
+        {% endif %}
+      </p>
+      {% endunless %}
+     </div>
+
+    {% comment %}
+      Get a brief excerpt of raw text from the page/product
+    {% endcomment %}
+    <p>{{ item.content | strip_html | truncatewords: 50 | replace: '<p>[split]</p>', '[split]' | replace: '[split]', '' }}</p>
+  </div>
+
+</div>
+
+{% unless forloop.last %}<hr>{% endunless %}
+

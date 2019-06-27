@@ -1,0 +1,446 @@
+<!-- /sections/collection-exclusive.liquid -->
+
+{%- assign grid_offset = '' -%}
+{%- assign products_count = collection.products_count -%}
+{%- case section.settings.grid_setting_large -%}
+  {%- when 1 -%}
+    {%- assign grid_width_large = 'large--one-whole' -%}
+  {%- when 2 -%}
+    {%- assign grid_width_large = 'large--one-half' -%}
+    {%- if products_count == 1 -%}
+      {%- assign grid_offset = 'push--large--one-quarter' -%}
+    {%- endif -%}
+  {%- when 3 -%}
+    {%- assign grid_width_large = 'large--one-third' -%}
+    {%- if products_count == 1 -%}
+      {%- assign grid_offset = 'push--large--one-third' -%}
+    {%- elsif products_count == 2 -%}
+      {%- assign grid_offset = 'push--large--one-sixth' -%}
+    {%- endif -%}
+  {%- when 4 -%}
+    {%- assign grid_width_large = 'large--one-quarter' -%}
+    {%- if products_count == 1 -%}
+      {%- assign grid_offset = 'push--large--three-eighths' -%}
+    {%- elsif products_count == 2 -%}
+      {%- assign grid_offset = 'push--large--one-quarter' -%}
+    {%- elsif products_count == 3 -%}
+      {%- assign grid_offset = 'push--large--one-eighth' -%}
+    {%- endif -%}
+  {%- when 5 -%}
+    {%- assign grid_width_large = 'large--one-fifth' -%}
+    {%- if products_count == 1 -%}
+      {%- assign grid_offset = 'push--large--two-fifths' -%}
+    {%- elsif products_count == 2 -%}
+      {%- assign grid_offset = 'push--large--three-tenths' -%}
+    {%- elsif products_count == 3 -%}
+      {%- assign grid_offset = 'push--large--one-fifth' -%}
+    {%- elsif products_count == 4 -%}
+      {%- assign grid_offset = 'push--large--one-tenth' -%}
+    {%- endif -%}
+  {%- when 6 -%}
+    {%- assign grid_width_large = 'large--one-sixth' -%}
+    {%- if products_count == 1 -%}
+      {%- assign grid_offset = 'push--large--five-twelfths' -%}
+    {%- elsif products_count == 2 -%}
+      {%- assign grid_offset = 'push--large--two-sixths' -%}
+    {%- elsif products_count == 3 -%}
+      {%- assign grid_offset = 'push--large--three-twelfths' -%}
+    {%- elsif products_count == 4 -%}
+      {%- assign grid_offset = 'push--large--one-sixth' -%}
+    {%- elsif products_count == 5 -%}
+      {%- assign grid_offset = 'push--large--one-twelfth' -%}
+    {%- endif -%}
+{%- endcase -%}
+{%- case section.settings.grid_setting_medium -%}
+  {%- when 1 -%}
+    {%- assign grid_width_medium = 'medium--one-whole' -%}
+  {%- when 2 -%}
+    {%- assign grid_width_medium = 'medium--one-half' -%}
+  {%- when 3 -%}
+    {%- assign grid_width_medium = 'medium--one-third' -%}
+  {%- when 4 -%}
+    {%- assign grid_width_medium = 'medium--one-quarter' -%}
+{%- endcase -%}
+{%- case section.settings.grid_setting_small -%}
+  {%- when 1 -%}
+    {%- assign grid_width_small = 'small--one-whole' -%}
+  {%- when 2 -%}
+    {%- assign grid_width_small = 'small--one-half' -%}
+  {%- when 3 -%}
+    {%- assign grid_width_small = 'small--one-third' -%}
+{%- endcase -%}
+
+{%- assign product_count = 48 -%}
+{%- if grid_width_large == 'large--one-whole' -%}
+  {%- assign product_count = 20 -%}
+{%- elsif grid_width_large == 'large--one-half' -%}
+  {%- assign product_count = 50 -%}
+{%- elsif grid_width_large == 'large--one-third' -%}
+  {%- assign product_count = 48 -%}
+{%- elsif grid_width_large == 'large--one-quarter' -%}
+  {%- assign product_count = 48 -%}
+{%- elsif grid_width_large == 'large--one-fifth' -%}
+  {%- assign product_count = 50 -%}
+{%- endif -%}
+{%- paginate collection.products by product_count -%}
+
+{%- assign collection_sidebar = true -%}
+
+<div data-section-id="{{ section.id }}" data-section-type="collection">
+
+  {% if collection.image %}
+    <div class="homepage-image preventOverflow {{ section.settings.text_color }} {{ section.settings.image_height }}" id="FeaturedImage-{{ section.id }}" {% if section.settings.parallax %}data-img-src="{{ collection.image | img_url: '1800x' }}"{% endif %}>
+      <div class="content--centered">
+        <div class="text-center preventOverflowContent">
+          <h1 class="title--flex">{{ collection.title }}</h1>
+          {% if collection.description.size > 0 %}<div class="content--flex rte">{{ collection.description }}</div>{% endif %}
+        </div>
+      </div>
+      <div class="image-overlay image-overlay-{{ section.settings.overlay_opacity }}"></div>
+      {% if section.settings.image_height == 'use_image' %}
+        <img src="{{ collection.image | img_url: '1400x' }}" alt="{{ collection.image | default: collection.title }}" class="responsive-wide-image" {% if section.settings.parallax %} style="opacity: 0;"{% endif %}/>
+      {% endif %}
+      {% if section.settings.parallax == false and section.settings.image_height != 'use_image' %}
+        <div class="background-size-cover" style="background-image: url('{{ collection.image | img_url: '1400x' }}');"></div>
+      {% endif %}
+    </div>
+  {% endif %}
+  
+  <div class="collection">
+    <div class="coll-flex-container">
+      <div class="flex-this">      
+        <figure class="snip0068 blue"><img src="https://cdn.shopify.com/s/files/1/2338/3111/files/performance.png?10224912233631509448" alt="sampl31" />
+          <figcaption>
+            <div>
+              <h3>Performance Eyewear</h3>
+            </div>
+            <div><span>SHOP NOW</span></div>
+            <a href="https://www.rudyprojectna.com/collections/performance-sunglasses"></a>
+          </figcaption>
+        </figure>
+        <figure class="snip0068 blue"><img src="https://cdn.shopify.com/s/files/1/2338/3111/files/helmets.png?10224912233631509448" alt="sampl31" />
+          <figcaption>
+            <div>
+              <h3>Helmets</h3>
+            </div>
+            <div><span>SHOP NOW</span></div>
+            <a href="https://www.rudyprojectna.com/collections/helmets"></a>
+          </figcaption>
+        </figure>
+        <figure class="snip0068 blue"><img src="https://cdn.shopify.com/s/files/1/2338/3111/files/casual.png?10224912233631509448" alt="sampl31" />
+          <figcaption>
+            <div>
+              <h3>Casual Eyewear</h3>
+            </div>
+            <div><span>SHOP NOW</span></div>
+            <a href="https://www.rudyprojectna.com/collections/casuals-sunglasses"></a>
+          </figcaption>
+        </figure>
+        <figure class="snip0068 blue"><img src="https://cdn.shopify.com/s/files/1/2338/3111/files/rx.png?10224912233631509448" alt="sampl31" />
+          <figcaption>
+            <div>
+              <h3>Rx Prescription</h3>
+            </div>
+            <div><span>SHOP NOW</span></div>
+            <a href="https://www.rudyprojectna.com/collections/rx"></a>
+          </figcaption>
+        </figure>
+        <figure class="snip0068 blue"><img src="https://cdn.shopify.com/s/files/1/2338/3111/files/goggles.png?10224912233631509448" alt="sampl31" />
+          <figcaption>
+            <div>
+              <h3>Goggles</h3>
+            </div>
+            <div><span>SHOP NOW</span></div>
+            <a href="https://www.rudyprojectna.com/collections/goggles"></a>
+          </figcaption>
+        </figure>
+        <figure class="snip0068 blue"><img src="https://cdn.shopify.com/s/files/1/2338/3111/files/gear.png?10224912233631509448" alt="sampl31" />
+          <figcaption>
+            <div>
+              <h3>Gear & Apparel</h3>
+            </div>
+            <div><span>SHOP NOW</span></div>
+            <a href="https://www.rudyprojectna.com/collections/all-gear"></a>
+          </figcaption>
+        </figure>
+         <figure class="snip0018 blue"><img src="https://cdn.shopify.com/s/files/1/2338/3111/files/free_gear_13c8a576-cccd-4fbe-8d5e-3c04628d423a.jpg?13036199724784012106" alt="sampl31" />
+  <figcaption>
+    <div>
+      <h3>NEW WATER BOTTLES</h3>
+    </div>
+    <div><span>IN STOCK NOW</span></div>
+    <a href="https://www.rudyprojectna.com/collections/all-gear/products/elevate-your-performance-water-bottle"></a>
+  </figcaption>
+</figure>
+<figure class="snip0018 blue"><img src="https://cdn.shopify.com/s/files/1/2338/3111/files/Water-bottle-banner.jpg?4366108011555414484" alt="sampl31" />
+  <figcaption>
+    <div>
+      <h3>SALE ITEMS</h3>
+    </div>
+    <div><span>SHOP NOW</span></div>
+    <a href="https://www.rudyprojectna.com/collections/sale"></a>
+  </figcaption>
+</figure>
+<figure class="snip0018 blue"><img src="https://cdn.shopify.com/s/files/1/2338/3111/files/betty_designs.jpg?4693896437408076612" alt="sampl31" />
+  <figcaption>
+    <div>
+      <h3>UP TO 85% OFF</h3>
+    </div>
+    <div><span>SHOP CLEARANCE</span></div>
+    <a href="https://www.rudyprojectna.com/collections/clearance"></a>
+  </figcaption>
+</figure>
+      </div>
+    </div>
+    {% unless collection.image %}
+      <div class="wrapper collection-title text-center color-text {{ section.settings.text_color }}">
+        <div class="grid">
+          <h1 class="bc-sf-filter-collection-header title grid__item one-whole">{{ collection.title }}</h1>
+          {% if collection.description.size > 0 %}
+            <div class="collection-text--body rte grid__item large--three-fifths push--large--one-fifth">
+              <div class="bc-sf-filter-collection-description h4--body rte">{{ collection.description }}</div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endunless %}
+    <div class="wrapper">
+      {% if section.settings.collection_sorting or collection_sidebar %}
+        {% if collection_sidebar %}
+          <div class="text-left">
+            <button id="toggleFilters" class="left btn btn--clear uppercase toggle-filters">
+              <img src="{{ 'filter.svg' | asset_url }}" alt="{{ 'collections.sidebar.more' | t }}"/>
+            </button>
+          </div>
+        {% endif %}
+        {% if section.settings.collection_sorting %}
+          <div class="row text-right collection__sort">
+            <div id="bc-sf-filter-top-sorting" class="form-horizontal"></div>
+          </div>
+        {% endif %}
+        <hr class="hr--small">
+      {% endif %}
+      <div class="page-margin grid collection-sidebar">
+        {% if collection_sidebar %}
+          <div class="grid__item large--one-quarter collection-filters" id="collectionFilters">
+            <div id="bc-sf-filter-tree-mobile"></div>
+            <div id="bc-sf-filter-tree"></div>
+          </div>
+        {% endif %}
+        {% if collection_sidebar %}
+          <div class="grid__item large--three-quarters">
+        {% else  %}
+          <div class="grid__item one-whole">
+            <div id="bc-sf-filter-tree-h"></div>
+            <div id="bc-sf-filter-tree-mobile"></div>
+            <div id="bc-sf-filter-tree"></div>
+
+        {% endif %}
+          <div id="bc-sf-filter-products" class="grid-uniform{% if settings.image_autoheight_enable %} image_autoheight_enable{% endif %}">
+            {% for product in collection.products %}
+              {% include 'product-grid-item' %}
+            {% else %}
+              {% if collection.handle == 'all'%}
+                {% unless emptyState %}
+                  {{ 'theme-onboarding.css' | asset_url | stylesheet_tag }}
+                  {% assign emptyState = true %}
+                {% endunless %}
+                {% include 'onboarding-empty-collection' %}
+              {% else %}
+              <div class="grid__item">
+                <p>{{ 'collections.general.no_matches' | t }}</p>
+              </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+          
+          <hr>
+          <div id="bc-sf-filter-bottom-pagination" class="text-center"></div>
+          <div id="bc-sf-filter-load-more"></div>
+        </div>
+      </div>
+      {% endpaginate %}
+    </div>
+    </div>
+  </div>
+</div>
+
+<style>
+
+  .coll-flex-container
+  {
+    margin-bottom: 55px;
+  }
+  
+  
+</style>
+
+<script>
+  // Declare bcSfFilterConfig variable
+  var bcSfFilterConfig = {
+    label: {
+      refine: "{{ 'product_filter_search.refine' | t }}",
+      refine_mobile: "{{ 'product_filter_search.refine_mobile' | t }}",
+      clear: "{{ 'product_filter_search.clear' | t }}",
+      clear_all: "{{ 'product_filter_search.clear_all' | t }}",
+      apply: "{{ 'product_filter_search.apply' | t }}",
+      breadcrumb_home: {% if product_filter_search.breadcrumb_home != blank %} {{ 'product_filter_search.breadcrumb_home' | t }}" {% else %} "Home" {% endif %},
+      load_more: {% assign temp = 'product_filter_search.load_more' | t %} {% unless temp contains 'translation missing'  %} "{{ temp }}" {% else %} "Load more Products" {% endunless %},
+      show_limit: {% assign temp = 'product_filter_search.show_limit' | t %} {% unless temp contains 'translation missing'  %} "{{ temp }}" {% else %} "Show" {% endunless %},
+      sorting: {% assign temp = 'collections.sorting.title' | t  %} {% unless temp contains 'translation missing'  %} "{{ temp }}" {% else %} "Sorting" {% endunless %},
+      sorting_best_selling: {% assign temp = 'collections.sorting.best_selling' | t %} {% unless temp contains 'translation missing'  %} "{{ temp }}" {% else %} "Best Selling" {% endunless %},
+      sorting_featured: {% assign temp = 'collections.sorting.featured' | t %} {% unless temp contains 'translation missing'  %} "{{ temp }}" {% else %} "Featured" {% endunless %},
+      sorting_title_ascending: {% assign temp = 'collections.sorting.az' | t %} {% unless temp contains 'translation missing'  %} "{{ temp }}" {% else %} "Alphabetically, A-Z" {% endunless %},
+      sorting_title_descending: {% assign temp = 'collections.sorting.za' | t %} {% unless temp contains 'translation missing'  %} "{{ temp }}" {% else %} "Alphabetically, Z-A" {% endunless %},
+      sorting_price_ascending: {% assign temp = 'collections.sorting.price_ascending' | t %} {% unless temp contains 'translation missing'  %} "{{ temp }}" {% else %} "Lowest Price" {% endunless %},
+      sorting_price_descending: {% assign temp = 'collections.sorting.price_descending' | t %} {% unless temp contains 'translation missing'  %} "{{ temp }}" {% else %} "Highest Price" {% endunless %},
+      sorting_date_ascending: {% assign temp = 'collections.sorting.date_ascending' | t %} {% unless temp contains 'translation missing'  %} "{{ temp }}" {% else %} "Date, Old to New" {% endunless %},
+      sorting_date_descending: {% assign temp = 'collections.sorting.date_descending' | t %} {% unless temp contains 'translation missing'  %} "{{ temp }}" {% else %} "Date, New to Old" {% endunless %},
+      sorting_sale_descending: {% assign temp = 'collections.sorting.sale_descending' | t %} {% unless temp contains 'translation missing'  %} "{{ temp }}" {% else %} "% Off" {% endunless %},
+      search_general_title: {% assign temp = 'product_filter_search.search_general_title' | t %} {% unless temp contains 'translation missing'  %} "{{ temp }}" {% else %} 'Search' {% endunless %},
+      search_result_header: {% assign temp = 'product_filter_search.search_result_header' | t %} {% unless temp contains 'translation missing'  %} "{{ temp }}" {% else %} {% raw %}'Search Results for "{{ terms }}"'{% endraw %} {% endunless %},
+      search_result_empty: {% assign temp = 'product_filter_search.search_result_empty' | t %} {% unless temp contains 'translation missing'  %} "{{ temp }}" {% else %} {% raw %}'Your search for "{{ terms }}"" didn\'t match any results'{% endraw %} {% endunless %},
+      search_result_number: {% assign temp = 'product_filter_search.search_result_number' | t %} {% unless temp contains 'translation missing'  %} "{{ temp }}" {% else %} {% raw %}'Showing {{ count }} results for "{{ terms }}"'{% endraw %} {% endunless %},
+    
+      sold_out: "{{ 'products.product.sold_out' | t }}",
+      sale: "{{ 'products.product.sale' | t }}",
+      new: "{{ 'products.product.new' | t }}",
+      from_price: "{{ 'products.general.from' | t }}",
+    },
+    custom: {
+      products_per_page: {{ product_count }},
+      grid_offset: "{{ grid_offset }}",
+      grid_width_small: "{{ grid_width_small }}",
+      grid_width_medium: "{{ grid_width_medium }}",
+      grid_width_large: "{{ grid_width_large }}",
+      product_grid_style: "{{ settings.product_grid_style }}",
+      collection_text_alignment: "{{ settings.collection_text_alignment | default: 'text-center' }}",
+      tag_new_limit: {{ settings.tag_new_limit }},
+      tag_sale: {{ settings.tag_sale }},
+      tag_new: {{ settings.tag_new }},
+    }
+  };
+</script>
+
+{% schema %}
+
+{
+  "name": "Collection page",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Products per row"
+    },
+    {
+      "type":    "range",
+      "id":      "grid_setting_large",
+      "min":     1,
+      "max":     6,
+      "step":    1,
+      "label":   "Desktop",
+      "default": 4
+    },
+    {
+      "type":    "range",
+      "id":      "grid_setting_medium",
+      "min":     1,
+      "max":     4,
+      "step":    1,
+      "label":   "Tablet",
+      "default": 2
+    },
+    {
+      "type":    "range",
+      "id":      "grid_setting_small",
+      "min":     1,
+      "max":     3,
+      "step":    1,
+      "label":   "Mobile",
+      "default": 2
+    },
+    {
+      "type": "header",
+      "content": "Sidebar menu"
+    },
+    {
+      "type": "link_list",
+      "id": "collection_custom_nav_list",
+      "label": "Custom link list"
+    },
+    {
+      "type": "checkbox",
+      "id": "collection_standard_nav",
+      "label": "Show all collections"
+    },
+    {
+      "type": "checkbox",
+      "id": "collection_type_nav",
+      "label": "Show types"
+    },
+    {
+      "type": "checkbox",
+      "id": "collection_vendor_nav",
+      "label": "Show vendors"
+    },
+    {
+      "type": "checkbox",
+      "id": "collection_tag_nav",
+      "label": "Show tags"
+    },
+    {
+      "type": "header",
+      "content": "Collection sorting"
+    },
+    {
+      "type": "checkbox",
+      "id": "collection_sorting",
+      "label": "Show collection sorting"
+    },
+    {
+      "type": "header",
+      "content": "Feature image"
+    },
+    {
+      "type": "select",
+      "id": "image_height",
+      "label": "Image height",
+      "options": [
+        { "value": "use_image", "label": "Image height"},
+        { "value": "use_screen_two_thirds", "label": "Tall"},
+        { "value": "use_screen_one_half", "label": "Medium"},
+        { "value": "use_screen_one_third", "label": "Short"},
+        { "value": "use_screen_one_fifth", "label": "Tiny"}
+      ],
+      "default": "use_screen_one_third"
+    },
+    {
+      "type":    "range",
+      "id":      "overlay_opacity",
+      "min":     0,
+      "max":     100,
+      "step":    5,
+      "label":   "Image overlay opacity",
+      "info":    "Increase contrast for legible text.",
+      "default": 20
+    },
+    {
+      "type": "select",
+      "id": "text_color",
+      "default": "homepage--white",
+      "label": "Text color",
+      "options": [
+        { "value": "homepage--white", "label": "White"},
+        { "value": "homepage--light", "label": "Light"},
+        { "value": "homepage--splash", "label": "Accent"},
+        { "value": "homepage--dark", "label": "Dark"}
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "parallax",
+      "default": false,
+      "label": "Enable parallax scroll"
+    }
+  ]
+}
+{% endschema %}

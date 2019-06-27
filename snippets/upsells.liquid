@@ -1,0 +1,22 @@
+{% assign grid_width_large = 'large--one-quarter' %}
+{% assign grid_width_medium = 'medium--one-half' %}
+{% assign grid_width_small = 'small--one-half' %}
+<div class="homepage-collection homepage--white" data-section-type="index-collection">
+  <div class="wrapper">
+    <h4 class="home__subtitle">Incredibly Low Priced Items For You Today!</h4>
+    <div class="grid-uniform">
+      {% assign collection_handle = 'cart-upsell' %}
+      {% for product in collections[collection_handle].products %}
+    {%- include 'bold-product' with product, hide_action: 'skip' -%}
+        
+        {% if product.available %}
+          {% include 'product-grid-item-upsell' %}
+        {% endif %}
+
+      {% else %}
+        {{ 'theme-onboarding.css' | asset_url | stylesheet_tag }}
+      {% include 'onboarding-featured-products' %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

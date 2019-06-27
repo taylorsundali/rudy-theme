@@ -1,0 +1,44 @@
+{% assign finalPrice = 0 %}
+
+{% if customer %}
+	{% assign productPrice = product.price %}
+   {% if variant %}
+		{% assign productPrice = variant.price %}
+   {% endif %}
+  {% capture discountRulesString %}{% include 'custom-rules' %}{% endcapture %}
+
+  {% assign discountRules = discountRulesString | split: "," %}
+  
+  {% for discountRule in discountRules %}
+
+    {% assign discountRuleNew = discountRule | split: "::" %}
+
+    {% assign discountRuleArray = discountRuleNew[0] | split: "|" %}
+    {% assign customerTag = discountRuleArray[0] %}
+    {% assign discountRuleMessage = discountRuleArray[1] %}
+    {% if customer.tags contains customerTag %}
+      {% assign discountRuleConditions = discountRuleNew[1] | split: ";" %}
+      {% for discountRuleCondition in discountRuleConditions %}
+        {% assign discountRuleConditionArray = discountRuleCondition | split: ":" %}
+        {% assign conditionTag = discountRuleConditionArray[0] %}
+        {% assign discountAmount = discountRuleConditionArray[1] %}
+        {% if product.tags contains conditionTag %}
+          {% assign fullAmount = 100  %}
+
+          {% assign finalDiscount =  fullAmount | minus: discountAmount %}
+
+          {% assign finalDiscount2 =  finalDiscount | times: 0.01 %}
+
+		  {% assign finalPrice = productPrice | times: finalDiscount2 %}
+
+
+
+        {% endif %}
+
+      {% endfor %}
+
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{{finalPrice}}

@@ -1,0 +1,36 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+
+        jQuery(function() {
+            var $module = jQuery('#m-1505941979295').children('.module');
+
+            var mode = jQuery('.gryffeditor').hasClass('editing') ? 'dev' : 'production';
+            if(mode == 'dev') {
+                $module.children('.hero-link').hide();
+            }
+
+            if($module.attr('data-fullheight') == '1' ){
+                var wHeight = jQuery(window).height();
+                $module.css({
+                    'height': wHeight
+                });
+                jQuery(window).resize(function(){
+                    $module.css('height', jQuery(window).height());
+                });
+                $module.addClass('full-height');
+            } else {
+                $module.css({
+                    'height': 'auto'
+                });
+                jQuery(window).resize(function(){
+                    $module.css('height', 'auto');
+                });
+                $module.removeClass('full-height');
+            }
+        });
+    
