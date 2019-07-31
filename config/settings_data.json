@@ -430,7 +430,7 @@
           "1550268069080": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Defender_Homepage_Slider.jpg",
+              "image": "shopify:\/\/shop_images\/Defender_Homepage_Slider_v7.jpg",
               "overlay_opacity": 15,
               "title": "DEFENDER",
               "description": "Elevate Your Performance",
@@ -453,21 +453,6 @@
               "color": "homepage--white",
               "link_text": "View products",
               "link": "https:\/\/www.rudyprojectna.com\/products\/spectrum-helmets",
-              "button_style": "btn btn--large btn--clear btn--square uppercase",
-              "button_image": ""
-            }
-          },
-          "1558458918373": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Flash_Homepage_Slider.jpg",
-              "overlay_opacity": 15,
-              "title": "BEST DEALS",
-              "description": "Find the lowest prices on <br>outgoing styles in our Outlet.",
-              "text_align": "text-left",
-              "color": "homepage--white",
-              "link_text": "View outlet",
-              "link": "shopify:\/\/collections\/sale",
               "button_style": "btn btn--large btn--clear btn--square uppercase",
               "button_image": ""
             }
@@ -501,14 +486,29 @@
               "button_style": "btn btn--large btn--clear btn--square uppercase",
               "button_image": ""
             }
+          },
+          "1564516998356": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/BetterTogether_Homepage_Slider3.jpg",
+              "overlay_opacity": 15,
+              "title": "BETTER TOGETHER",
+              "description": "Our Helmets and Eyewear are Co-Developed <br>for Maximum Performance and Comfort",
+              "text_align": "text-right",
+              "color": "homepage--white",
+              "link_text": "Shop Now",
+              "link": "https:\/\/www.rudyprojectna.com\/collections\/helmet-sunglass-combinations",
+              "button_style": "btn btn--large btn--clear btn--square uppercase",
+              "button_image": ""
+            }
           }
         },
         "block_order": [
+          "1564516998356",
           "1550268069080",
-          "1555609126747",
-          "1558458918373",
           "1555537808658",
-          "1555609232025"
+          "1555609232025",
+          "1555609126747"
         ],
         "settings": {
           "autoplay": false,
